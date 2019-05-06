@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.mera.bopopov'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
+        classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
+    }
+}
+
+dependencies {
+    compile("org.codehaus.groovy:groovy-all:2.5.6")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    //compile("org.springframework.boot:spring-boot-starter-web-services")
+
+    //Apache Camel
+    compile("org.apache.camel:camel-servlet-starter:2.23.2")
+    compile("org.apache.camel:camel-jackson-starter:2.23.2")
+    compile("org.apache.camel:camel-swagger-java-starter:2.23.2")
+    compile("org.apache.camel:camel-spring-boot-starter:2.23.2")
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
