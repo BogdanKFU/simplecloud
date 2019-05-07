@@ -25,7 +25,7 @@ buildscript {
 dependencies {
     compile("org.codehaus.groovy:groovy-all:2.5.6")
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-cassandra")
     //compile("org.springframework.boot:spring-boot-starter-web-services")
 
     //Apache Camel

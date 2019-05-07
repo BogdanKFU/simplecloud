@@ -1,8 +1,8 @@
 package com.mera.bopopov.simplecloud.repository
 
 import com.mera.bopopov.simplecloud.model.User
-import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.cassandra.repository.CassandraRepository
 
-interface UserRepository extends JpaRepository<User, UUID> {
+interface UserRepository extends CassandraRepository<User, UUID> {
 
 }
